@@ -11,8 +11,8 @@ html {
 body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(80,120,255,0.34), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(180,80,255,0.24), transparent 34%),
+    radial-gradient(circle at top left, rgba(80,120,255,0.32), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(180,80,255,0.22), transparent 34%),
     #08090d;
   color: white;
   overflow-x: hidden;
@@ -27,20 +27,22 @@ a {
   position: fixed;
   inset: 0;
   background: #08090d;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-  transition: opacity 0.7s ease, visibility 0.7s ease;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .boot-screen.hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .boot-logo {
   text-align: center;
-  animation: bootFloat 1.8s ease infinite;
+  animation: bootFloat 1.6s ease-in-out infinite;
 }
 
 .boot-mark {
@@ -66,7 +68,6 @@ a {
 .boot-subtitle {
   margin-top: 8px;
   color: rgba(255,255,255,0.5);
-  font-size: 0.9rem;
 }
 
 @keyframes bootFloat {
@@ -89,13 +90,11 @@ a {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
-  animation: pageFade 0.8s ease both;
 }
 
 .logo {
   font-weight: 900;
   font-size: 1.2rem;
-  letter-spacing: -0.04em;
 }
 
 .logo span {
@@ -145,15 +144,9 @@ a {
 .page-hero,
 .download-hero {
   min-height: 100vh;
-  padding: 160px 24px 80px;
+  padding: 155px 24px 80px;
   display: flex;
   align-items: center;
-  animation: pageFade 0.8s ease both;
-}
-
-.content-section {
-  padding: 90px 24px;
-  animation: pageFade 0.8s ease both;
 }
 
 .section-inner {
@@ -165,9 +158,23 @@ a {
   width: min(1100px, 100%);
   margin: auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(420px, 0.8fr);
+  gap: 56px;
   align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.terminal-showcase {
+  width: 100%;
+  min-width: 420px;
+  padding: 26px;
+  border-radius: 36px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(22px);
 }
 
 .badge {
@@ -182,7 +189,7 @@ a {
 
 h1,
 .page-title {
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(3rem, 7vw, 6rem);
   line-height: 0.95;
   letter-spacing: -0.08em;
   margin-bottom: 24px;
@@ -218,6 +225,16 @@ h1,
   flex-wrap: wrap;
 }
 
+.content-section {
+  padding: 90px 24px;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  margin-bottom: 16px;
+  letter-spacing: -0.06em;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -232,25 +249,33 @@ h1,
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.07);
   backdrop-filter: blur(22px);
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
 .glass-card:hover,
 .feature-card:hover,
-.download-tile:hover {
+.download-tile:hover,
+.terminal-showcase:hover {
   border-color: rgba(159,183,255,0.35);
   background: rgba(255,255,255,0.1);
 }
 
 .glass-card {
   border-radius: 36px;
-  padding: 26px;
+  padding: 32px;
+}
+
+.split-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 36px;
+  align-items: center;
 }
 
 .feature-card {
   padding: 28px;
   border-radius: 30px;
-  min-height: 190px;
+  min-height: 170px;
 }
 
 .feature-card h3 {
@@ -263,13 +288,9 @@ h1,
   line-height: 1.7;
 }
 
-.section-title {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  margin-bottom: 16px;
-  letter-spacing: -0.06em;
-}
-
 .terminal {
+  width: 100%;
+  min-width: 0;
   background: rgba(0,0,0,0.45);
   border-radius: 24px;
   overflow: hidden;
@@ -293,7 +314,7 @@ h1,
 }
 
 .terminal-body {
-  padding: 22px;
+  padding: 24px;
   color: #dce5ff;
 }
 
@@ -301,6 +322,7 @@ pre {
   font-family: Consolas, "SF Mono", monospace;
   line-height: 1.75;
   white-space: pre-wrap;
+  font-size: 0.92rem;
 }
 
 .download-grid {
@@ -311,24 +333,22 @@ pre {
 }
 
 .download-tile {
-  min-height: 360px;
+  min-height: 340px;
   padding: 32px;
   border-radius: 34px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 22px;
 }
 
 .download-tile h3 {
   font-size: 2rem;
-  margin: 18px 0 14px;
-  letter-spacing: -0.04em;
+  margin-top: 18px;
 }
 
 .download-tile p {
   color: rgba(255,255,255,0.66);
   line-height: 1.65;
-  margin-bottom: 22px;
 }
 
 .download-label {
@@ -369,26 +389,6 @@ pre {
 .disabled-btn {
   opacity: 0.45;
   cursor: not-allowed;
-}
-
-.install-card {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr auto;
-  gap: 24px;
-  align-items: center;
-}
-
-.install-steps {
-  display: grid;
-  gap: 10px;
-}
-
-.install-steps div {
-  padding: 12px 14px;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.75);
-  font-weight: 700;
 }
 
 .docs {
@@ -442,7 +442,6 @@ pre {
   overflow-x: auto;
   background: rgba(0,0,0,0.45);
   border: 1px solid rgba(255,255,255,0.1);
-  color: #dce5ff;
 }
 
 footer {
@@ -450,6 +449,9 @@ footer {
   text-align: center;
   color: rgba(255,255,255,0.42);
   border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.fade-in {
   animation: pageFade 0.8s ease both;
 }
 
@@ -465,13 +467,17 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .hero-grid,
+  .split-card,
   .cards,
   .download-grid,
-  .install-card,
   .docs {
     grid-template-columns: 1fr;
+  }
+
+  .terminal-showcase {
+    min-width: 0;
   }
 
   .nav-links {
@@ -509,8 +515,9 @@ footer {
     text-align: center;
   }
 
-  .download-tile {
-    min-height: auto;
+  h1,
+  .page-title {
+    font-size: clamp(3rem, 14vw, 4.7rem);
   }
 
   .about-title {

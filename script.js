@@ -1,30 +1,23 @@
 function fakeDownload() {
-  alert(
-    "Download link is not connected yet. Replace this later with your GitHub release or ZIP file."
-  );
+  alert("Download link is not connected yet. Replace this later with your GitHub release or ZIP file.");
 }
 
 const bootScreen = document.getElementById("bootScreen");
 
 if (bootScreen) {
+  document.body.style.overflow = "hidden";
+
   window.addEventListener("load", () => {
     setTimeout(() => {
       bootScreen.classList.add("hidden");
+      document.body.style.overflow = "";
     }, 900);
   });
 }
 
-const cards = document.querySelectorAll(
-  ".feature-card, .glass-card, .download-tile"
-);
-
-window.addEventListener("mousemove", (e) => {
-  const x = e.clientX / window.innerWidth - 0.5;
-  const y = e.clientY / window.innerHeight - 0.5;
-
-  cards.forEach((card) => {
-    card.style.transform = `translate(${x * 4}px, ${y * 4}px)`;
-  });
+document.querySelectorAll("main section, footer").forEach((item, index) => {
+  item.classList.add("fade-in");
+  item.style.animationDelay = `${index * 0.08}s`;
 });
 
 const changingText = document.querySelector(".changing-text");
