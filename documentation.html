@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation • BMOS</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">BM<span>OS</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+      <a href="documentation.html">Documentation</a>
+    </div>
+
+    <a href="download.html" class="nav-btn">Get BMOS</a>
+  </nav>
+
+  <section class="page-hero">
+
+    <div class="section-inner">
+
+      <div class="badge">Documentation</div>
+
+      <h1 class="page-title">
+        BMOS
+        <span class="gradient-text">Documentation.</span>
+      </h1>
+
+      <p class="page-subtitle">
+        Setup instructions, commands, and package management.
+      </p>
+
+      <div class="docs">
+
+        <div class="doc-menu">
+          <a href="#install">Install</a>
+          <a href="#commands">Commands</a>
+          <a href="#packages">Packages</a>
+          <a href="#repo">Repository</a>
+        </div>
+
+        <div class="doc-content">
+
+          <h3 id="install">Install</h3>
+
+          <p>
+            Clone or transfer BMOS onto your Raspberry Pi,
+            then launch the main file.
+          </p>
+
+          <pre>python3 bmos.py</pre>
+
+          <h3 id="commands">Commands</h3>
+
+          <pre>help
+apps
+settings
+clear
+exit</pre>
+
+          <h3 id="packages">Packages</h3>
+
+          <pre>/opt/bmos/packages/weather.zip</pre>
+
+          <h3 id="repo">Repository</h3>
+
+          <pre>{
+  "packages": [
+    {
+      "name": "weather",
+      "version": "1.0"
+    }
+  ]
+}</pre>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    BMOS Project · Documentation
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
