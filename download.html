@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Download • BMOS</title>
 
   <link rel="stylesheet" href="style.css"/>
@@ -23,47 +24,224 @@
     <a href="download.html" class="nav-btn">Get BMOS</a>
   </nav>
 
-  <section class="page-hero">
+  <main>
 
-    <div class="section-inner">
+    <section class="page-hero">
 
-      <div class="badge">Downloads</div>
+      <div class="section-inner">
 
-      <h1 class="page-title">
-        Download
-        <span class="gradient-text">BMOS.</span>
-      </h1>
+        <div class="badge">Downloads</div>
 
-      <p class="page-subtitle">
-        Download the latest BMOS build and begin experimenting
-        with your own terminal operating environment.
-      </p>
-
-      <div class="download-box">
-
-        <div>
-          <h3>BMOS 1.2</h3>
-
-          <p>
-            Includes setup, password support,
-            packages, and shell improvements.
-          </p>
-        </div>
-
-        <a href="#" class="btn primary" onclick="fakeDownload()">
+        <h1 class="page-title">
           Download
-        </a>
+          <span class="gradient-text">BMOS.</span>
+        </h1>
+
+        <p class="page-subtitle">
+          Choose the version of BMOS that best fits your workflow.
+          Stable builds are recommended for most users.
+        </p>
+
+        <!-- DOWNLOAD GRID -->
+
+        <div class="cards">
+
+          <!-- STABLE -->
+
+          <div class="feature-card download-card">
+
+            <div class="download-top">
+              <div class="download-badge stable">
+                Recommended
+              </div>
+
+              <h3>BMOS 1.2 Stable</h3>
+
+              <p class="download-subtitle">
+                The latest stable public release of BMOS.
+              </p>
+            </div>
+
+            <div class="download-section">
+
+              <h4>Best For</h4>
+
+              <p>
+                Everyday use, experimentation, customization,
+                and learning the BMOS environment.
+              </p>
+
+            </div>
+
+            <div class="download-section">
+
+              <h4>What's New</h4>
+
+              <ul>
+                <li>Password system</li>
+                <li>Improved package support</li>
+                <li>Updated shell environment</li>
+                <li>Better startup handling</li>
+                <li>Repository support groundwork</li>
+              </ul>
+
+            </div>
+
+            <div class="download-section">
+
+              <h4>Includes</h4>
+
+              <ul>
+                <li>BMOS Shell</li>
+                <li>Settings system</li>
+                <li>Package loading</li>
+                <li>CLI applications</li>
+              </ul>
+
+            </div>
+
+            <a href="#" class="btn primary full-btn" onclick="fakeDownload()">
+              Download Stable
+            </a>
+
+          </div>
+
+          <!-- EDUCATION -->
+
+          <div class="feature-card download-card">
+
+            <div class="download-top">
+              <div class="download-badge upcoming">
+                Coming Soon
+              </div>
+
+              <h3>BMOS Education</h3>
+
+              <p class="download-subtitle">
+                A classroom-focused version of BMOS.
+              </p>
+            </div>
+
+            <div class="download-section">
+
+              <h4>Best For</h4>
+
+              <p>
+                Schools, students, computer science learning,
+                and educational Raspberry Pi labs.
+              </p>
+
+            </div>
+
+            <div class="download-section">
+
+              <h4>Planned Features</h4>
+
+              <ul>
+                <li>Guided tutorials</li>
+                <li>Learning-focused shell tools</li>
+                <li>Classroom-friendly utilities</li>
+                <li>Simplified onboarding</li>
+                <li>Educational package repository</li>
+              </ul>
+
+            </div>
+
+            <div class="download-section">
+
+              <h4>Status</h4>
+
+              <p>
+                BMOS Education is currently in development
+                and does not yet have a public release date.
+              </p>
+
+            </div>
+
+            <button class="btn secondary full-btn disabled-btn">
+              Coming Soon
+            </button>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <!-- INSTALL INFO -->
+
+    <section>
+
+      <div class="section-inner">
+
+        <div class="glass-card">
+
+          <div class="hero-grid">
+
+            <div>
+
+              <h2 class="section-title">
+                Installation
+              </h2>
+
+              <p class="section-subtitle">
+                BMOS can be flashed onto a drive,
+                installed in virtual environments,
+                or used on supported hardware systems.
+              </p>
+
+              <p class="section-subtitle">
+                Full installation and setup instructions
+                are available in the documentation.
+              </p>
+
+              <div class="buttons">
+
+                <a href="documentation.html" class="btn primary">
+                  Read Documentation
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="terminal">
+
+              <div class="terminal-top">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+
+              <div class="terminal-body">
+<pre>Installation Steps
+
+1. Download BMOS
+2. Flash or install
+3. Boot the system
+4. Complete setup
+5. Start experimenting</pre>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
 
   <footer>
     BMOS Project · Downloads
   </footer>
 
   <script src="script.js"></script>
+
 </body>
 </html>
