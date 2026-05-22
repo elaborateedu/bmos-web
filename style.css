@@ -417,3 +417,11 @@ footer {
     border-radius: 18px;
   }
 }
+
+.changing-text {
+  transition: opacity 0.25s ease;
+}
+
+.page-title {
+  min-height: 140px;
+}

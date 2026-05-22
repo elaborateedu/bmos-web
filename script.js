@@ -20,4 +20,41 @@ window.addEventListener("mousemove", (e) => {
 
   });
 
+const textElement = document.querySelector(".changing-text");
+
+if (textElement) {
+
+  const words = [
+    "developers.",
+    "students.",
+    "hackers.",
+    "creators.",
+    "makers.",
+    "tinkerers.",
+    "engineers.",
+    "learners.",
+    "builders.",
+    "experimenters."
+  ];
+
+  let index = 0;
+
+  setInterval(() => {
+
+    textElement.style.opacity = 0;
+
+    setTimeout(() => {
+
+      index = (index + 1) % words.length;
+
+      textElement.textContent = words[index];
+
+      textElement.style.opacity = 1;
+
+    }, 250);
+
+  }, 2200);
+
+}
+
 });

@@ -35,51 +35,313 @@
       </h1>
 
       <p class="page-subtitle">
-        Setup instructions, commands, and package management.
+        Everything needed to install, flash, configure,
+        and use BMOS on your Raspberry Pi.
       </p>
 
       <div class="docs">
 
         <div class="doc-menu">
-          <a href="#install">Install</a>
+          <a href="#requirements">Requirements</a>
+          <a href="#downloading">Downloading</a>
+          <a href="#flashing">Flashing BMOS</a>
+          <a href="#firstboot">First Boot</a>
           <a href="#commands">Commands</a>
           <a href="#packages">Packages</a>
+          <a href="#updates">Updates</a>
           <a href="#repo">Repository</a>
+          <a href="#troubleshooting">Troubleshooting</a>
         </div>
 
         <div class="doc-content">
 
-          <h3 id="install">Install</h3>
+          <!-- REQUIREMENTS -->
+
+          <h3 id="requirements">Requirements</h3>
 
           <p>
-            Clone or transfer BMOS onto your Raspberry Pi,
-            then launch the main file.
+            Before installing BMOS, make sure you have the following:
           </p>
 
-          <pre>python3 bmos.py</pre>
+          <ul>
+            <li>Raspberry Pi 4, Pi 400, or newer recommended</li>
+            <li>MicroSD card (16GB or larger recommended)</li>
+            <li>MicroSD card reader</li>
+            <li>Computer running Windows, macOS, or Linux</li>
+            <li>Internet connection for downloads and updates</li>
+          </ul>
+
+          <br>
+
+          <p>
+            BMOS is designed around Raspberry Pi OS Lite and a custom Python shell environment.
+          </p>
+
+          <!-- DOWNLOADING -->
+
+          <h3 id="downloading">Downloading BMOS</h3>
+
+          <p>
+            BMOS can be downloaded directly from the official BMOS website
+            or GitHub releases page.
+          </p>
+
+          <p>
+            Download the latest <strong>.img</strong> file or compressed archive.
+          </p>
+
+<pre>BMOS-1.2.img.zip</pre>
+
+          <p>
+            If the file is split into multiple parts:
+          </p>
+
+<pre>BMOS.part1.zip
+BMOS.part2.zip
+BMOS.part3.zip</pre>
+
+          <p>
+            Download all parts into the same folder before extracting.
+          </p>
+
+          <!-- FLASHING -->
+
+          <h3 id="flashing">Flashing BMOS</h3>
+
+          <p>
+            BMOS must be flashed onto a microSD card before booting.
+          </p>
+
+          <br>
+
+          <p><strong>Recommended flashing software:</strong></p>
+
+          <ul>
+            <li>Raspberry Pi Imager</li>
+            <li>Balena Etcher</li>
+            <li>Win32DiskImager</li>
+          </ul>
+
+          <br>
+
+          <p><strong>Flashing using Raspberry Pi Imager:</strong></p>
+
+          <ol>
+            <li>Insert your microSD card into your computer</li>
+            <li>Open Raspberry Pi Imager</li>
+            <li>Select "Use Custom"</li>
+            <li>Select the BMOS .img file</li>
+            <li>Select your SD card</li>
+            <li>Press "Write"</li>
+            <li>Wait for flashing to complete</li>
+          </ol>
+
+          <br>
+
+          <p>
+            Once flashing is complete, safely eject the SD card.
+          </p>
+
+          <!-- FIRST BOOT -->
+
+          <h3 id="firstboot">First Boot</h3>
+
+          <p>
+            Insert the flashed SD card into your Raspberry Pi and power it on.
+          </p>
+
+          <br>
+
+          <p>
+            During first boot, BMOS may:
+          </p>
+
+          <ul>
+            <li>Resize the filesystem</li>
+            <li>Initialize packages</li>
+            <li>Create configuration files</li>
+            <li>Run setup and password creation</li>
+          </ul>
+
+          <br>
+
+          <p>
+            You may see startup messages similar to:
+          </p>
+
+<pre>Loading BMOS Core...
+Checking packages...
+Initializing settings...
+Starting shell...</pre>
+
+          <p>
+            Once complete, the BMOS shell will launch automatically.
+          </p>
+
+          <!-- COMMANDS -->
 
           <h3 id="commands">Commands</h3>
 
-          <pre>help
+          <p>
+            BMOS includes a command-based shell environment.
+          </p>
+
+          <br>
+
+          <p><strong>Common commands:</strong></p>
+
+<pre>help
 apps
 settings
 clear
+repo
+update
 exit</pre>
+
+          <br>
+
+          <p><strong>Example:</strong></p>
+
+<pre>bmos> help</pre>
+
+          <p>
+            This displays a list of available BMOS commands.
+          </p>
+
+          <!-- PACKAGES -->
 
           <h3 id="packages">Packages</h3>
 
-          <pre>/opt/bmos/packages/weather.zip</pre>
+          <p>
+            BMOS supports package-style applications.
+          </p>
+
+          <br>
+
+          <p>
+            Packages are typically installed as zip files:
+          </p>
+
+<pre>weather.zip
+notes.zip
+music.zip</pre>
+
+          <p>
+            Installed packages are stored in:
+          </p>
+
+<pre>/opt/bmos/packages/</pre>
+
+          <p>
+            BMOS automatically scans this folder during startup.
+          </p>
+
+          <br>
+
+          <p><strong>Installing a package manually:</strong></p>
+
+<ol>
+  <li>Download the package zip</li>
+  <li>Move it into the packages folder</li>
+  <li>Restart BMOS</li>
+</ol>
+
+          <!-- UPDATES -->
+
+          <h3 id="updates">Updates</h3>
+
+          <p>
+            BMOS updates may include:
+          </p>
+
+          <ul>
+            <li>New shell commands</li>
+            <li>Performance improvements</li>
+            <li>Package manager updates</li>
+            <li>Security fixes</li>
+          </ul>
+
+          <br>
+
+          <p>
+            Future versions of BMOS may support online updating directly from repositories.
+          </p>
+
+          <!-- REPOSITORY -->
 
           <h3 id="repo">Repository</h3>
 
-          <pre>{
+          <p>
+            BMOS repositories contain package listings and update information.
+          </p>
+
+          <br>
+
+          <p><strong>Example repo.json:</strong></p>
+
+<pre>{
   "packages": [
     {
       "name": "weather",
-      "version": "1.0"
+      "version": "1.0",
+      "file": "weather.zip"
+    },
+    {
+      "name": "notes",
+      "version": "1.2",
+      "file": "notes.zip"
     }
   ]
 }</pre>
+
+          <p>
+            BMOS reads this file to determine available downloads and updates.
+          </p>
+
+          <!-- TROUBLESHOOTING -->
+
+          <h3 id="troubleshooting">Troubleshooting</h3>
+
+          <p><strong>BMOS does not boot:</strong></p>
+
+          <ul>
+            <li>Reflash the image</li>
+            <li>Verify the SD card is working properly</li>
+            <li>Use a Raspberry Pi 4 or newer if possible</li>
+          </ul>
+
+          <br>
+
+          <p><strong>Packages are not loading:</strong></p>
+
+          <ul>
+            <li>Verify the package is a valid zip file</li>
+            <li>Place the file in the correct packages directory</li>
+            <li>Restart BMOS</li>
+          </ul>
+
+          <br>
+
+          <p><strong>Permission denied errors:</strong></p>
+
+<pre>sudo chmod +x filename</pre>
+
+          <br>
+
+          <p><strong>System updates fail:</strong></p>
+
+          <ul>
+            <li>Check internet connection</li>
+            <li>Verify repository configuration</li>
+            <li>Restart BMOS and try again</li>
+          </ul>
+
+          <br>
+
+          <p>
+            Additional support and future documentation
+            will be available through the BMOS website and GitHub repository.
+          </p>
 
         </div>
 
