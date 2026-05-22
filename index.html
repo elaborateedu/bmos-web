@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BMOS</title>
-
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="boot-screen" id="bootScreen">
+    <div class="boot-logo">
+      <div class="boot-mark">BM</div>
+      <div class="boot-title">BMOS</div>
+      <div class="boot-subtitle">starting system...</div>
+    </div>
+  </div>
 
   <nav class="navbar">
     <a href="index.html" class="logo">BM<span>OS</span></a>
@@ -25,48 +30,29 @@
   </nav>
 
   <main>
-
-    <!-- HERO -->
-
     <section class="hero">
-
       <div class="hero-grid">
-
         <div>
-
-          <div class="badge">BMOS 1.2 Preview</div>
+          <div class="badge">BMOS 1.2 Stable</div>
 
           <h1>
             A modern terminal OS
-            <span class="gradient-text">
-              built for experimentation.
-            </span>
+            <span class="gradient-text">built for experimentation.</span>
           </h1>
 
           <p>
-            BMOS is a lightweight command-line operating environment
-            focused on customization, packages, learning,
-            and building your own shell-based workflow.
+            BMOS is a lightweight command-line operating environment focused on
+            customization, packages, learning, and building your own shell-based workflow.
           </p>
 
           <div class="buttons">
-
-            <a href="download.html" class="btn primary">
-              Download BMOS
-            </a>
-
-            <a href="documentation.html" class="btn secondary">
-              Documentation
-            </a>
-
+            <a href="download.html" class="btn primary">Download BMOS</a>
+            <a href="documentation.html" class="btn secondary">Documentation</a>
           </div>
-
         </div>
 
         <div class="glass-card">
-
           <div class="terminal">
-
             <div class="terminal-top">
               <div class="dot"></div>
               <div class="dot"></div>
@@ -92,109 +78,58 @@ update
 weather
 clear</pre>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- FEATURES -->
-
-    <section>
-
+    <section class="content-section">
       <div class="section-inner">
-
-        <h2 class="section-title">
-          Built for creators.
-        </h2>
+        <h2 class="section-title">Built for creators.</h2>
 
         <p class="section-subtitle">
-          BMOS combines the flexibility of Linux-style systems
-          with a clean shell environment designed for experimentation,
-          customization, and lightweight workflows.
+          BMOS combines a clean shell environment with package support,
+          customization, and a minimal design that makes it easy to explore.
         </p>
 
         <div class="cards">
-
           <div class="feature-card">
             <h3>Minimal</h3>
-
-            <p>
-              BMOS removes unnecessary clutter and focuses
-              on speed, simplicity, and usability.
-            </p>
+            <p>BMOS keeps the interface simple, fast, and focused on what matters.</p>
           </div>
 
           <div class="feature-card">
             <h3>Expandable</h3>
-
-            <p>
-              Install apps and utilities through packages
-              and repositories to expand BMOS over time.
-            </p>
+            <p>Add tools, commands, utilities, and packages as BMOS grows.</p>
           </div>
 
           <div class="feature-card">
             <h3>Educational</h3>
-
-            <p>
-              Learn command-line systems, shell environments,
-              packages, updates, and system design concepts.
-            </p>
+            <p>Learn command-line systems, shell structure, updates, and packages.</p>
           </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- SHOWCASE -->
-
-    <section>
-
+    <section class="content-section">
       <div class="section-inner">
-
         <div class="glass-card">
-
           <div class="hero-grid">
-
             <div>
-
-              <h2 class="section-title">
-                A system you can actually understand.
-              </h2>
+              <h2 class="section-title">A system you can actually understand.</h2>
 
               <p class="section-subtitle">
-                BMOS is intentionally lightweight and approachable.
-                Instead of hiding how everything works,
-                BMOS encourages exploration and modification.
-              </p>
-
-              <p class="section-subtitle">
-                Explore packages, edit configuration files,
-                create commands, and shape BMOS into your own environment.
+                BMOS is intentionally lightweight and approachable. It encourages
+                you to explore, modify, and build instead of hiding everything away.
               </p>
 
               <div class="buttons">
-
-                <a href="about.html" class="btn primary">
-                  Learn More
-                </a>
-
-                <a href="documentation.html" class="btn secondary">
-                  Setup Guide
-                </a>
-
+                <a href="about.html" class="btn primary">Learn More</a>
+                <a href="documentation.html" class="btn secondary">Setup Guide</a>
               </div>
-
             </div>
 
             <div class="terminal">
-
               <div class="terminal-top">
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -207,114 +142,20 @@ clear</pre>
 OS: BMOS 1.2
 Shell: BMOS CLI
 Packages: Enabled
-Repository: Connected
+Repository: Ready
 Status: Operational
 
 Customization Ready</pre>
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
-
-    <!-- QUICK START -->
-
-    <section>
-
-      <div class="section-inner">
-
-        <h2 class="section-title">
-          Quick Start
-        </h2>
-
-        <p class="section-subtitle">
-          Get BMOS running in just a few minutes.
-        </p>
-
-        <div class="cards">
-
-          <div class="feature-card">
-            <h3>1. Download</h3>
-
-            <p>
-              Download the latest BMOS image
-              or package from the downloads page.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>2. Install</h3>
-
-            <p>
-              Flash BMOS to a drive or install it
-              inside your preferred environment.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <h3>3. Experiment</h3>
-
-            <p>
-              Build commands, install packages,
-              customize settings, and explore the shell.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- FINAL CTA -->
-
-    <section>
-
-      <div class="section-inner">
-
-        <div class="glass-card center-card">
-
-          <div class="badge">BMOS Project</div>
-
-          <h2 class="section-title">
-            Start building with BMOS.
-          </h2>
-
-          <p class="section-subtitle center-text">
-            Lightweight. Expandable. Built for experimentation.
-          </p>
-
-          <div class="buttons center-buttons">
-
-            <a href="download.html" class="btn primary">
-              Download
-            </a>
-
-            <a href="documentation.html" class="btn secondary">
-              Documentation
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
   </main>
 
-  <footer>
-    BMOS Project · Built for experimentation and learning.
-  </footer>
+  <footer>BMOS Project · Built for experimentation and learning.</footer>
 
   <script src="script.js"></script>
-
 </body>
 </html>

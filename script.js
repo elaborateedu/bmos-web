@@ -4,8 +4,18 @@ function fakeDownload() {
   );
 }
 
+const bootScreen = document.getElementById("bootScreen");
+
+if (bootScreen) {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      bootScreen.classList.add("hidden");
+    }, 900);
+  });
+}
+
 const cards = document.querySelectorAll(
-  ".feature-card, .glass-card, .download-box"
+  ".feature-card, .glass-card, .download-tile"
 );
 
 window.addEventListener("mousemove", (e) => {
@@ -13,7 +23,7 @@ window.addEventListener("mousemove", (e) => {
   const y = e.clientY / window.innerHeight - 0.5;
 
   cards.forEach((card) => {
-    card.style.transform = `translate(${x * 6}px, ${y * 6}px)`;
+    card.style.transform = `translate(${x * 4}px, ${y * 4}px)`;
   });
 });
 
@@ -26,11 +36,9 @@ if (changingText) {
     "makers.",
     "tinkerers.",
     "creators.",
-    "Raspberry Pi users.",
     "experimenters.",
     "builders.",
     "learners.",
-    "hackers.",
     "coders.",
     "DIY projects."
   ];
