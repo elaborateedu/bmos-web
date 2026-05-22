@@ -1,105 +1,282 @@
-<section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <div class="section-inner">
+  <title>BMOS</title>
 
-    <h2 class="section-title">
-      A terminal OS designed for experimentation.
-    </h2>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 
-    <p class="section-subtitle">
-      BMOS combines the flexibility of Linux with a clean,
-      focused command-line environment built specifically
-      for learning, customization, and Raspberry Pi projects.
-    </p>
+<body>
 
-    <div class="cards">
+  <nav class="navbar">
+    <a href="index.html" class="logo">BM<span>OS</span></a>
 
-      <div class="feature-card">
-        <h3>Lightweight</h3>
-
-        <p>
-          BMOS is optimized for Raspberry Pi systems,
-          keeping startup times fast and resource usage low.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Package Based</h3>
-
-        <p>
-          Add functionality through packages and repositories,
-          allowing BMOS to grow over time.
-        </p>
-      </div>
-
-      <div class="feature-card">
-        <h3>Educational</h3>
-
-        <p>
-          Learn Linux concepts, shell environments,
-          Python scripting, and system design through experimentation.
-        </p>
-      </div>
-
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+      <a href="documentation.html">Documentation</a>
     </div>
 
-    <div style="height: 28px;"></div>
+    <a href="download.html" class="nav-btn">Get BMOS</a>
+  </nav>
 
-    <div class="glass-card">
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
 
       <div class="hero-grid">
 
         <div>
 
-          <h2 class="section-title">
-            Built for Raspberry Pi.
-          </h2>
+          <div class="badge">BMOS 1.2 Preview</div>
 
-          <p class="section-subtitle">
-            BMOS was designed around Raspberry Pi hardware,
-            making it perfect for DIY projects,
-            portable systems, retro terminals,
-            and lightweight development environments.
+          <h1>
+            A modern terminal OS
+            <span class="gradient-text">
+              for Raspberry Pi.
+            </span>
+          </h1>
+
+          <p>
+            BMOS is a lightweight command-line operating environment
+            designed for learning, experimentation, customization,
+            and building your own shell-based system.
           </p>
 
           <div class="buttons">
             <a href="download.html" class="btn primary">
-              Start Installing
+              Download BMOS
             </a>
 
             <a href="documentation.html" class="btn secondary">
-              Read Docs
+              Documentation
             </a>
           </div>
 
         </div>
 
-        <div class="terminal">
+        <div class="glass-card">
 
-          <div class="terminal-top">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+          <div class="terminal">
+
+            <div class="terminal-top">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="terminal-body">
+<pre>bmos@system:~$ boot
+
+Loading BMOS Core...
+Checking packages...
+Loading settings...
+Starting shell...
+
+Welcome to BMOS 1.2
+
+bmos> help
+
+apps
+settings
+repo
+update
+weather
+clear</pre>
+            </div>
+
           </div>
 
-          <div class="terminal-body">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section>
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          Built for experimentation.
+        </h2>
+
+        <p class="section-subtitle">
+          BMOS combines a lightweight shell environment with
+          package support, customization, and Raspberry Pi optimization
+          to create a system focused on learning and creativity.
+        </p>
+
+        <div class="cards">
+
+          <div class="feature-card">
+            <h3>Minimal</h3>
+
+            <p>
+              BMOS removes unnecessary clutter and focuses
+              on speed, simplicity, and usability.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Package Based</h3>
+
+            <p>
+              Install apps and utilities through packages
+              and repositories to expand BMOS over time.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Educational</h3>
+
+            <p>
+              Learn Linux concepts, command-line systems,
+              Raspberry Pi workflows, and shell environments.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SHOWCASE -->
+
+    <section>
+
+      <div class="section-inner">
+
+        <div class="glass-card">
+
+          <div class="hero-grid">
+
+            <div>
+
+              <h2 class="section-title">
+                A system you can actually understand.
+              </h2>
+
+              <p class="section-subtitle">
+                BMOS is intentionally lightweight and approachable.
+                Instead of hiding how everything works,
+                BMOS encourages exploration and modification.
+              </p>
+
+              <p class="section-subtitle">
+                Explore packages, edit configuration files,
+                create commands, and shape BMOS into your own environment.
+              </p>
+
+              <div class="buttons">
+
+                <a href="about.html" class="btn primary">
+                  Learn More
+                </a>
+
+                <a href="documentation.html" class="btn secondary">
+                  Setup Guide
+                </a>
+
+              </div>
+
+            </div>
+
+            <div class="terminal">
+
+              <div class="terminal-top">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+
+              <div class="terminal-body">
 <pre>System Information
 
 OS: BMOS 1.2
 Kernel: Raspberry Pi OS Lite
 Shell: BMOS CLI
 Packages: Enabled
-Network: Connected
+Status: Operational
 
-Status: Operational</pre>
+Repository Connected</pre>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
+    <!-- QUICK START -->
 
-</section>
+    <section>
+
+      <div class="section-inner">
+
+        <h2 class="section-title">
+          Quick Start
+        </h2>
+
+        <p class="section-subtitle">
+          Get BMOS running in just a few minutes.
+        </p>
+
+        <div class="cards">
+
+          <div class="feature-card">
+            <h3>1. Download</h3>
+
+            <p>
+              Download the latest BMOS image
+              from the downloads page.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>2. Flash</h3>
+
+            <p>
+              Use Raspberry Pi Imager or Balena Etcher
+              to flash BMOS onto a microSD card.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h3>3. Boot</h3>
+
+            <p>
+              Insert the SD card into your Raspberry Pi
+              and power on the system.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    BMOS Project · Built for experimentation and learning.
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

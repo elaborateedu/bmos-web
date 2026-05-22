@@ -9,52 +9,41 @@ const cards = document.querySelectorAll(
 );
 
 window.addEventListener("mousemove", (e) => {
-
   const x = e.clientX / window.innerWidth - 0.5;
   const y = e.clientY / window.innerHeight - 0.5;
 
   cards.forEach((card) => {
-
-    card.style.transform =
-      `translate(${x * 6}px, ${y * 6}px)`;
-
+    card.style.transform = `translate(${x * 6}px, ${y * 6}px)`;
   });
+});
 
-const textElement = document.querySelector(".changing-text");
+const changingText = document.querySelector(".changing-text");
 
-if (textElement) {
-
+if (changingText) {
   const words = [
     "developers.",
     "students.",
-    "hackers.",
-    "creators.",
     "makers.",
     "tinkerers.",
-    "engineers.",
-    "learners.",
+    "creators.",
+    "Raspberry Pi users.",
+    "experimenters.",
     "builders.",
-    "experimenters."
+    "learners.",
+    "hackers.",
+    "coders.",
+    "DIY projects."
   ];
 
-  let index = 0;
+  let wordIndex = 0;
 
   setInterval(() => {
-
-    textElement.style.opacity = 0;
+    changingText.style.opacity = "0";
 
     setTimeout(() => {
-
-      index = (index + 1) % words.length;
-
-      textElement.textContent = words[index];
-
-      textElement.style.opacity = 1;
-
+      wordIndex = (wordIndex + 1) % words.length;
+      changingText.textContent = words[wordIndex];
+      changingText.style.opacity = "1";
     }, 250);
-
   }, 2200);
-
 }
-
-});
