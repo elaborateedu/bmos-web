@@ -480,8 +480,24 @@ footer {
     min-width: 0;
   }
 
+  .navbar {
+    width: min(1100px, calc(100% - 24px));
+    gap: 12px;
+  }
+
   .nav-links {
-    display: none;
+    display: flex;
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  .nav-btn {
+    padding: 10px 14px;
+    font-size: 0.85rem;
   }
 
   .doc-menu {
@@ -523,4 +539,25 @@ footer {
   .about-title {
     min-height: 110px;
   }
+}
+
+.raw {
+  background: rgba(214,168,255,0.16);
+  color: #ead8ff;
+  border: 1px solid rgba(214,168,255,0.35);
+}
+
+.section-kicker {
+  display: inline-flex;
+  padding: 8px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 22px;
+  font-weight: 800;
+}
+
+.single-download {
+  grid-template-columns: minmax(280px, 540px);
 }

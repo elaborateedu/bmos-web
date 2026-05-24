@@ -20,18 +20,22 @@
 
   <nav class="navbar">
     <a href="index.html" class="logo">BM<span>OS</span></a>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="download.html">Download</a>
       <a href="documentation.html">Documentation</a>
     </div>
+
     <a href="download.html" class="nav-btn">Get BMOS</a>
   </nav>
 
   <main>
+
     <section class="download-hero">
       <div class="section-inner">
+
         <div class="badge">Downloads</div>
 
         <h1 class="page-title">
@@ -41,16 +45,18 @@
 
         <p class="page-subtitle">
           Choose the version of BMOS that fits what you want to build.
-          Stable is recommended for most users.
+          Core is recommended for most users.
         </p>
 
         <div class="download-grid">
           <div class="download-tile">
             <span class="download-label recommended">Recommended</span>
-            <h3>BMOS 1.2 Stable</h3>
+
+            <h3>BMOS 1.2 Core</h3>
+
             <p>
-              The main BMOS release for most users. Built for experimenting,
-              customization, packages, and everyday BMOS use.
+              The main BMOS release for most users. Built for everyday use,
+              customization, packages, and experimenting with the BMOS shell.
             </p>
 
             <div class="mini-info">
@@ -59,15 +65,59 @@
               <span>Updated shell</span>
             </div>
 
-            <a href="#" class="btn primary" onclick="fakeDownload()">Download Stable</a>
+            <a href="#" class="btn primary" onclick="fakeDownload()">
+              Download Core
+            </a>
           </div>
 
+          <div class="download-tile">
+            <span class="download-label raw">Developer Preview</span>
+
+            <h3>BMOS Raw</h3>
+
+            <p>
+              The latest incomplete preview build of BMOS. Best for developers
+              and testers who want to try new features before they are stable.
+            </p>
+
+            <div class="mini-info">
+              <span>Preview</span>
+              <span>Buggy</span>
+              <span>Experimental</span>
+            </div>
+
+            <button class="btn secondary disabled-btn">
+              Coming Soon
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+
+        <div class="section-kicker">Other Versions</div>
+
+        <h2 class="section-title">
+          More ways to use BMOS.
+        </h2>
+
+        <p class="section-subtitle">
+          These versions are designed for specific use cases and may release
+          after the main Core version.
+        </p>
+
+        <div class="download-grid single-download">
           <div class="download-tile muted-tile">
             <span class="download-label coming-soon">Coming Soon</span>
+
             <h3>BMOS Education</h3>
+
             <p>
-              A future version of BMOS made for classrooms, students,
-              guided lessons, and beginner-friendly learning.
+              A future classroom-focused version of BMOS made for students,
+              guided lessons, beginner-friendly learning, and education tools.
             </p>
 
             <div class="mini-info">
@@ -76,11 +126,15 @@
               <span>Learning packages</span>
             </div>
 
-            <button class="btn secondary disabled-btn">Coming Soon</button>
+            <button class="btn secondary disabled-btn">
+              Coming Soon
+            </button>
           </div>
         </div>
+
       </div>
     </section>
+
   </main>
 
   <footer>BMOS Project · Downloads</footer>
