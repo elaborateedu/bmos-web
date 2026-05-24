@@ -18,74 +18,236 @@
 
   <nav class="navbar">
     <a href="index.html" class="logo">BM<span>OS</span></a>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="download.html">Download</a>
       <a href="documentation.html">Documentation</a>
     </div>
+
     <a href="download.html" class="nav-btn">Get BMOS</a>
   </nav>
 
   <main>
-    <section class="page-hero">
+    <section class="docs-hero">
       <div class="section-inner">
-        <div class="badge">Documentation</div>
+        <div class="badge">BMOS Documentation</div>
 
         <h1 class="page-title">
-          BMOS
-          <span class="gradient-text">Documentation.</span>
+          Learn
+          <span class="gradient-text">BMOS.</span>
         </h1>
 
         <p class="page-subtitle">
-          Learn how to download, install, boot, configure, and use BMOS.
+          A clear guide to downloading, installing, booting, using, updating,
+          and troubleshooting BMOS.
         </p>
+      </div>
+    </section>
 
-        <div class="docs">
-          <div class="doc-menu">
-            <a href="#requirements">Requirements</a>
-            <a href="#download">Download</a>
-            <a href="#install">Install</a>
-            <a href="#firstboot">First Boot</a>
-            <a href="#commands">Commands</a>
-            <a href="#packages">Packages</a>
-          </div>
+    <section class="docs-layout-section">
+      <div class="docs-layout">
 
-          <div class="doc-content">
-            <h3 id="requirements">Requirements</h3>
-            <p>You need a supported device or environment, storage media, and a way to flash or install BMOS.</p>
+        <aside class="docs-sidebar">
+          <h3>Documentation</h3>
 
-<pre>Recommended:
-• 16GB+ storage
-• Keyboard and display
-• Internet for updates
-• BMOS image or installer</pre>
+          <a href="#overview">Overview</a>
+          <a href="#versions">Versions</a>
+          <a href="#requirements">Requirements</a>
+          <a href="#download">Download BMOS</a>
+          <a href="#flash">Flash or Install</a>
+          <a href="#first-boot">First Boot</a>
+          <a href="#setup">Setup</a>
+          <a href="#commands">Commands</a>
+          <a href="#packages">Packages</a>
+          <a href="#updates">Updates</a>
+          <a href="#troubleshooting">Troubleshooting</a>
+          <a href="#support">Support</a>
+        </aside>
 
-            <h3 id="download">Download</h3>
-            <p>Download the latest stable BMOS version from the downloads page.</p>
+        <div class="docs-content">
 
-<pre>BMOS-1.2-Stable.img.zip</pre>
+          <article id="overview" class="doc-section">
+            <span class="doc-number">01</span>
+            <h2>Overview</h2>
 
-            <h3 id="install">Install</h3>
-            <p>Flash BMOS to a drive or install it in your preferred supported environment.</p>
+            <p>
+              BMOS is a lightweight command-line operating environment built for
+              experimentation, customization, packages, and learning. It is designed
+              to feel simple enough to understand, but expandable enough to grow.
+            </p>
 
-<pre>1. Download BMOS
-2. Extract the image
-3. Flash or install
-4. Boot the system</pre>
+            <div class="image-placeholder">
+              Image placeholder: BMOS main screen or terminal preview
+            </div>
 
-            <h3 id="firstboot">First Boot</h3>
-            <p>On first boot, BMOS may create settings, load packages, and start setup.</p>
+            <div class="info-box">
+              BMOS is not only for Raspberry Pi. It can be used wherever your
+              supported BMOS build or environment is designed to run.
+            </div>
 
-<pre>Loading BMOS Core...
+            <a href="#versions" class="continue-link">Continue to Versions →</a>
+          </article>
+
+          <article id="versions" class="doc-section">
+            <span class="doc-number">02</span>
+            <h2>Versions</h2>
+
+            <p>
+              BMOS has multiple editions depending on what kind of experience you want.
+            </p>
+
+            <div class="doc-cards">
+              <div>
+                <h3>BMOS 1.2 Core</h3>
+                <p>The recommended version for most users.</p>
+              </div>
+
+              <div>
+                <h3>BMOS Raw</h3>
+                <p>Experimental preview builds for testing upcoming features.</p>
+              </div>
+
+              <div>
+                <h3>BMOS Education</h3>
+                <p>A future classroom-focused version with guided learning tools.</p>
+              </div>
+            </div>
+
+            <a href="#requirements" class="continue-link">Continue to Requirements →</a>
+          </article>
+
+          <article id="requirements" class="doc-section">
+            <span class="doc-number">03</span>
+            <h2>Requirements</h2>
+
+            <p>
+              Before installing BMOS, make sure you have the correct files,
+              enough storage, and a supported device or environment.
+            </p>
+
+            <ul>
+              <li>BMOS image or installer file</li>
+              <li>16GB or larger storage recommended</li>
+              <li>A computer to download and prepare BMOS</li>
+              <li>A keyboard and display for setup</li>
+              <li>Internet access for updates and packages</li>
+            </ul>
+
+            <pre>Recommended storage: 16GB+
+Recommended version: BMOS 1.2 Core</pre>
+
+            <a href="#download" class="continue-link">Continue to Download BMOS →</a>
+          </article>
+
+          <article id="download" class="doc-section">
+            <span class="doc-number">04</span>
+            <h2>Download BMOS</h2>
+
+            <p>
+              Go to the BMOS download page and choose the version you want.
+              Most users should choose BMOS 1.2 Core.
+            </p>
+
+            <ol>
+              <li>Open the Download page.</li>
+              <li>Select BMOS 1.2 Core.</li>
+              <li>Download the file.</li>
+              <li>If the file is zipped, extract it first.</li>
+            </ol>
+
+            <div class="image-placeholder">
+              Image placeholder: Download page screenshot
+            </div>
+
+            <pre>Example file:
+BMOS-1.2-Core.img.zip</pre>
+
+            <a href="#flash" class="continue-link">Continue to Flash or Install →</a>
+          </article>
+
+          <article id="flash" class="doc-section">
+            <span class="doc-number">05</span>
+            <h2>Flash or Install</h2>
+
+            <p>
+              BMOS may be flashed to a drive, installed into a supported environment,
+              or prepared using the method provided for your device.
+            </p>
+
+            <h3>For image-based installs</h3>
+
+            <ol>
+              <li>Open Raspberry Pi Imager, Balena Etcher, or another flashing tool.</li>
+              <li>Select the BMOS image file.</li>
+              <li>Select your target drive.</li>
+              <li>Write the image.</li>
+              <li>Safely eject the drive when finished.</li>
+            </ol>
+
+            <div class="warning-box">
+              Flashing erases the selected drive. Make sure you choose the correct drive.
+            </div>
+
+            <a href="#first-boot" class="continue-link">Continue to First Boot →</a>
+          </article>
+
+          <article id="first-boot" class="doc-section">
+            <span class="doc-number">06</span>
+            <h2>First Boot</h2>
+
+            <p>
+              After BMOS is installed or flashed, boot into it. The first boot may take
+              longer because BMOS may create settings, check packages, and prepare the shell.
+            </p>
+
+            <pre>Loading BMOS Core...
 Checking packages...
-Starting setup...
-Launching shell...</pre>
+Loading settings...
+Starting shell...</pre>
 
-            <h3 id="commands">Commands</h3>
-            <p>Common BMOS commands:</p>
+            <p>
+              Once booting is complete, BMOS will show the main shell prompt.
+            </p>
 
-<pre>help
+            <pre>bmos></pre>
+
+            <a href="#setup" class="continue-link">Continue to Setup →</a>
+          </article>
+
+          <article id="setup" class="doc-section">
+            <span class="doc-number">07</span>
+            <h2>Setup</h2>
+
+            <p>
+              During setup, BMOS may ask you to create a username, password,
+              or basic configuration.
+            </p>
+
+            <ul>
+              <li>Create your BMOS user.</li>
+              <li>Set a password if required.</li>
+              <li>Confirm settings.</li>
+              <li>Restart BMOS if prompted.</li>
+            </ul>
+
+            <div class="image-placeholder">
+              Image placeholder: First-time setup screen
+            </div>
+
+            <a href="#commands" class="continue-link">Continue to Commands →</a>
+          </article>
+
+          <article id="commands" class="doc-section">
+            <span class="doc-number">08</span>
+            <h2>Commands</h2>
+
+            <p>
+              BMOS is controlled through commands. Type a command and press Enter.
+            </p>
+
+            <pre>help
 apps
 settings
 repo
@@ -93,11 +255,114 @@ update
 clear
 exit</pre>
 
-            <h3 id="packages">Packages</h3>
-            <p>BMOS packages add extra commands, tools, and features.</p>
+            <h3>Common commands</h3>
 
-<pre>/opt/bmos/packages/</pre>
-          </div>
+            <ul>
+              <li><strong>help</strong> — shows available commands</li>
+              <li><strong>apps</strong> — lists installed apps or packages</li>
+              <li><strong>settings</strong> — opens BMOS settings</li>
+              <li><strong>repo</strong> — checks repository information</li>
+              <li><strong>update</strong> — checks for updates</li>
+              <li><strong>clear</strong> — clears the screen</li>
+              <li><strong>exit</strong> — exits the shell</li>
+            </ul>
+
+            <a href="#packages" class="continue-link">Continue to Packages →</a>
+          </article>
+
+          <article id="packages" class="doc-section">
+            <span class="doc-number">09</span>
+            <h2>Packages</h2>
+
+            <p>
+              Packages add extra tools, commands, and features to BMOS.
+            </p>
+
+            <pre>/opt/bmos/packages/</pre>
+
+            <p>
+              A package may include command files, app files, settings, or extra
+              resources BMOS can load.
+            </p>
+
+            <h3>Basic package process</h3>
+
+            <ol>
+              <li>Download a BMOS package.</li>
+              <li>Place it in the packages folder.</li>
+              <li>Restart BMOS.</li>
+              <li>Run <strong>apps</strong> or <strong>help</strong> to check it.</li>
+            </ol>
+
+            <a href="#updates" class="continue-link">Continue to Updates →</a>
+          </article>
+
+          <article id="updates" class="doc-section">
+            <span class="doc-number">10</span>
+            <h2>Updates</h2>
+
+            <p>
+              Updates may include new commands, bug fixes, package changes,
+              startup improvements, and security improvements.
+            </p>
+
+            <pre>bmos> update</pre>
+
+            <p>
+              If online updates are not available in your build yet, download the
+              newest BMOS version manually from the Download page.
+            </p>
+
+            <a href="#troubleshooting" class="continue-link">Continue to Troubleshooting →</a>
+          </article>
+
+          <article id="troubleshooting" class="doc-section">
+            <span class="doc-number">11</span>
+            <h2>Troubleshooting</h2>
+
+            <h3>BMOS will not boot</h3>
+            <ul>
+              <li>Reflash the BMOS image.</li>
+              <li>Check that your drive or storage works.</li>
+              <li>Make sure your device/environment is supported.</li>
+            </ul>
+
+            <h3>Packages are not loading</h3>
+            <ul>
+              <li>Check that the package is in the correct folder.</li>
+              <li>Restart BMOS.</li>
+              <li>Make sure the package is built for your BMOS version.</li>
+            </ul>
+
+            <h3>Internet features do not work</h3>
+            <ul>
+              <li>Check your network connection.</li>
+              <li>Restart BMOS.</li>
+              <li>Try again later if the repo is offline.</li>
+            </ul>
+
+            <a href="#support" class="continue-link">Continue to Support →</a>
+          </article>
+
+          <article id="support" class="doc-section">
+            <span class="doc-number">12</span>
+            <h2>Support</h2>
+
+            <p>
+              If you need help, check the documentation first. If the issue is still
+              happening, report the problem with as much detail as possible.
+            </p>
+
+            <pre>Include:
+• BMOS version
+• Device or environment
+• What you were doing
+• Error message
+• Screenshots if possible</pre>
+
+            <a href="#overview" class="continue-link">Back to Overview ↑</a>
+          </article>
+
         </div>
       </div>
     </section>

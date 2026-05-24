@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Documentation Coming Soon • BMOS</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <style>
+    .soon-page {
+      min-height: 100vh;
+      padding: 160px 24px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .soon-card {
+      width: min(900px, 100%);
+      padding: 50px;
+      border-radius: 40px;
+
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(24px);
+
+      position: relative;
+      overflow: hidden;
+
+      text-align: center;
+    }
+
+    .soon-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(circle at top left,
+        rgba(159,183,255,0.18),
+        transparent 34%),
+
+        radial-gradient(circle at bottom right,
+        rgba(214,168,255,0.14),
+        transparent 34%);
+
+      pointer-events: none;
+    }
+
+    .soon-badge {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+
+      color: rgba(255,255,255,0.74);
+      font-weight: 800;
+
+      margin-bottom: 28px;
+    }
+
+    .soon-title {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+
+      margin-bottom: 24px;
+    }
+
+    .soon-title span {
+      background: linear-gradient(
+        135deg,
+        #ffffff,
+        #9fb7ff,
+        #d6a8ff
+      );
+
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .soon-text {
+      max-width: 700px;
+      margin: auto;
+
+      color: rgba(255,255,255,0.68);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .soon-terminal {
+      margin-top: 40px;
+
+      border-radius: 26px;
+      overflow: hidden;
+
+      background: rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.1);
+
+      text-align: left;
+    }
+
+    .soon-terminal-top {
+      height: 44px;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 0 16px;
+
+      background: rgba(255,255,255,0.08);
+    }
+
+    .soon-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.35);
+    }
+
+    .soon-terminal-body {
+      padding: 24px;
+
+      font-family: Consolas, monospace;
+      color: #dce5ff;
+      line-height: 1.8;
+      white-space: pre-wrap;
+    }
+
+    .soon-buttons {
+      margin-top: 38px;
+
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .pulse {
+      animation: pulseGlow 2.5s ease infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 0 0 rgba(159,183,255,0);
+      }
+
+      50% {
+        box-shadow: 0 0 40px rgba(159,183,255,0.18);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .soon-page {
+        padding: 135px 18px 70px;
+      }
+
+      .soon-card {
+        padding: 32px 24px;
+      }
+
+      .soon-buttons {
+        flex-direction: column;
+      }
+
+      .soon-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="boot-screen" id="bootScreen">
+    <div class="boot-logo">
+      <div class="boot-mark">BM</div>
+      <div class="boot-title">BMOS</div>
+      <div class="boot-subtitle">loading documentation...</div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">BM<span>OS</span></a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+      <a href="soon-docs.html">Documentation</a>
+    </div>
+
+    <a href="download.html" class="nav-btn">Get BMOS</a>
+  </nav>
+
+  <main class="soon-page">
+
+    <div class="soon-card pulse">
+
+      <div class="soon-badge">
+        Documentation In Progress
+      </div>
+
+      <h1 class="soon-title">
+        The BMOS docs are
+        <span>being rebuilt.</span>
+      </h1>
+
+      <p class="soon-text">
+        We are currently redesigning the BMOS documentation system
+        to make it clearer, easier to navigate, and more complete.
+        New setup guides, installation walkthroughs, package tutorials,
+        screenshots, and troubleshooting articles are on the way.
+      </p>
+
+      <div class="soon-terminal">
+
+        <div class="soon-terminal-top">
+          <div class="soon-dot"></div>
+          <div class="soon-dot"></div>
+          <div class="soon-dot"></div>
+        </div>
+
+        <div class="soon-terminal-body">bmos@docs:~$ status
+
+Rebuilding documentation...
+Generating guides...
+Adding screenshots...
+Writing tutorials...
+
+Status: In Progress</div>
+
+      </div>
+
+      <div class="soon-buttons">
+
+        <a href="index.html" class="btn primary">
+          Return Home
+        </a>
+
+        <a href="download.html" class="btn secondary">
+          Download BMOS
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    BMOS Project · Documentation Rebuild
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
