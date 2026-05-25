@@ -2,16 +2,16 @@ function fakeDownload() {
   alert("Download link is not connected yet. Replace this later with your GitHub release or ZIP file.");
 }
 
-const bootScreen = document.getElementById("bootScreen");
+const homeTransition = document.getElementById("homeTransition");
 
-if (bootScreen) {
+if (homeTransition) {
   document.body.style.overflow = "hidden";
 
   window.addEventListener("load", () => {
     setTimeout(() => {
-      bootScreen.classList.add("hidden");
+      homeTransition.classList.add("hide");
       document.body.style.overflow = "";
-    }, 900);
+    }, 1200);
   });
 }
 
@@ -33,7 +33,10 @@ if (changingText) {
     "builders.",
     "learners.",
     "coders.",
-    "DIY projects."
+    "scripters.",
+    "inventors",
+    "changers",
+    "innovators"
   ];
 
   let wordIndex = 0;
