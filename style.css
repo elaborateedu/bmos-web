@@ -820,18 +820,205 @@ footer {
   }
 }
 
+.docs-hero {
+  padding: 155px 24px 40px;
+}
+
+.docs-layout-section {
+  padding: 30px 24px 90px;
+}
+
+.docs-layout {
+  width: min(1100px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.docs-sidebar {
+  position: sticky;
+  top: 110px;
+  padding: 22px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(22px);
+}
+
+.docs-sidebar h3 {
+  margin-bottom: 16px;
+}
+
+.docs-sidebar a {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 14px;
+  color: rgba(255,255,255,0.68);
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.docs-sidebar a:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.docs-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+.doc-section {
+  width: 100%;
+  padding: 34px;
+  border-radius: 34px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(22px);
+}
+
+.doc-number {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: #9fb7ff;
+  font-weight: 900;
+}
+
+.doc-section h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.06em;
+  margin-bottom: 16px;
+}
+
+.doc-section h3 {
+  margin: 26px 0 12px;
+  font-size: 1.35rem;
+}
+
+.doc-section p,
+.doc-section li {
+  color: rgba(255,255,255,0.68);
+  line-height: 1.75;
+}
+
+.doc-section ul,
+.doc-section ol {
+  padding-left: 22px;
+  margin: 14px 0;
+}
+
+.doc-section pre {
+  margin: 18px 0;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #dce5ff;
+  overflow-x: auto;
+}
+
+.image-placeholder {
+  margin: 22px 0;
+  min-height: 220px;
+  border-radius: 26px;
+  border: 1px dashed rgba(255,255,255,0.24);
+  background: linear-gradient(135deg, rgba(159,183,255,0.12), rgba(214,168,255,0.08));
+  color: rgba(255,255,255,0.48);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  font-weight: 800;
+}
+
 .doc-image {
   margin: 24px 0;
   border-radius: 28px;
   overflow: hidden;
-
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.04);
-
   box-shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
 .doc-image img {
   width: 100%;
   display: block;
+}
+
+.info-box,
+.warning-box {
+  margin: 20px 0;
+  padding: 18px;
+  border-radius: 20px;
+  line-height: 1.7;
+}
+
+.info-box {
+  background: rgba(159,183,255,0.12);
+  border: 1px solid rgba(159,183,255,0.25);
+  color: #dce5ff;
+}
+
+.warning-box {
+  background: rgba(255,190,120,0.1);
+  border: 1px solid rgba(255,190,120,0.25);
+  color: #ffe0bd;
+}
+
+.doc-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.doc-cards div {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.doc-cards h3 {
+  margin: 0 0 8px;
+}
+
+.continue-link {
+  display: inline-flex;
+  margin-top: 26px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  font-weight: 900;
+}
+
+@media (max-width: 950px) {
+  .docs-layout,
+  .doc-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-sidebar {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .docs-hero {
+    padding: 135px 18px 30px;
+  }
+
+  .docs-layout-section {
+    padding: 20px 18px 70px;
+  }
+
+  .doc-section {
+    padding: 24px;
+  }
 }
