@@ -3,42 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
   <title>BMOS | Home</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-<div class="home-transition" id="homeTransition">
-  <div class="transition-glass">
-    <div class="transition-orb"></div>
-    <div class="transition-logo">BM</div>
-    <p>BMOS</p>
+
+  <div class="home-transition" id="homeTransition">
+    <div class="transition-glass">
+      <div class="transition-orb"></div>
+      <div class="transition-logo">BM</div>
+      <p>BMOS</p>
+    </div>
   </div>
-</div>
 
   <nav class="navbar">
     <a href="index.html" class="logo">BM<span>OS</span></a>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="download.html">Download</a>
+      <a href="donate.html">Donate</a>
       <a href="sd.html">Documentation</a>
     </div>
+
     <a href="download.html" class="nav-btn">Get BMOS</a>
   </nav>
 
   <main>
+
     <section class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
 
-
-                  <h1 class="page-title about-title">
-          A modern OS terminal built for
-          <span class="gradient-text changing-text">developers.</span>
-        </h1>
+          <h1 class="page-title about-title">
+            A modern OS terminal built for
+            <span class="gradient-text changing-text">developers.</span>
+          </h1>
 
           <p>
             BMOS is a lightweight command-line operating environment focused on
@@ -82,6 +89,7 @@ Download today!
     <section class="content-section">
       <div class="section-inner">
         <h2 class="section-title">Built for creators.</h2>
+
         <p class="section-subtitle">
           BMOS combines a clean shell environment with package support,
           customization, and a minimal design that makes it easy to explore.
@@ -110,7 +118,10 @@ Download today!
       <div class="section-inner">
         <div class="glass-card split-card">
           <div>
+            <div class="badge">Core Idea</div>
+
             <h2 class="section-title">A system you can actually understand.</h2>
+
             <p class="section-subtitle">
               BMOS is intentionally lightweight and approachable. It encourages
               you to explore, modify, and build instead of hiding everything away.
@@ -132,7 +143,7 @@ Download today!
             <div class="terminal-body">
 <pre>System Information
 
-OS: BMOS 1.2
+OS: BMOS 2.1
 Shell: BMOS CLI
 Packages: Enabled
 Repository: Ready
@@ -144,6 +155,243 @@ Customization Ready</pre>
         </div>
       </div>
     </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="badge">Why BMOS</div>
+
+        <h2 class="section-title">Not just an OS. A workspace for ideas.</h2>
+
+        <p class="section-subtitle">
+          BMOS is built for people who want to experiment with systems,
+          not just use them. It gives you a simple foundation to test commands,
+          package concepts, workflows, and your own custom tools.
+        </p>
+
+        <div class="cards">
+          <div class="feature-card">
+            <h3>Build commands</h3>
+            <p>Create your own commands and shape the shell around how you want to work.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Test ideas</h3>
+            <p>Use BMOS as a lightweight space to try tools, workflows, and utilities.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>Learn systems</h3>
+            <p>Understand how startup, settings, packages, and command environments work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="glass-card split-card">
+          <div class="terminal">
+            <div class="terminal-top">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="terminal-body">
+<pre>bmos> apps
+
+Installed Apps:
+- settings
+- package manager
+- repo tools
+- weather
+- notes
+
+bmos> repo status
+
+Repository: Ready
+Updates: Available Soon</pre>
+            </div>
+          </div>
+
+          <div>
+            <div class="badge">Packages</div>
+
+            <h2 class="section-title">Expand BMOS over time.</h2>
+
+            <p class="section-subtitle">
+              BMOS is designed around growth. Packages can add extra commands,
+              tools, utilities, and experiments without changing the entire system.
+            </p>
+
+            <div class="buttons">
+              <a href="sd.html" class="btn primary">Read Package Docs</a>
+              <a href="download.html" class="btn secondary">Get BMOS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="badge">Editions</div>
+
+        <h2 class="section-title">Choose your BMOS experience.</h2>
+
+        <p class="section-subtitle">
+          Different BMOS editions are planned for different users, from stable everyday use
+          to experimental builds and education-focused versions.
+        </p>
+
+        <div class="download-grid">
+          <div class="download-tile">
+            <span class="download-label recommended">Recommended</span>
+
+            <h3>BMOS 2.1 Core</h3>
+
+            <p>
+              The main release for most users. Built for customization,
+              package support, and everyday BMOS experimentation.
+            </p>
+
+            <div class="mini-info">
+              <span>Stable</span>
+              <span>Core Shell</span>
+              <span>Packages</span>
+            </div>
+
+            <a href="download.html" class="btn primary">Download Core</a>
+          </div>
+
+          <div class="download-tile">
+            <span class="download-label raw">Developer Preview</span>
+
+            <h3>BMOS Raw</h3>
+
+            <p>
+              An experimental preview for testers and developers who want to see
+              upcoming BMOS ideas before they are fully stable.
+            </p>
+
+            <div class="mini-info">
+              <span>Preview</span>
+              <span>Experimental</span>
+              <span>Testing</span>
+            </div>
+
+            <a href="download.html" class="btn secondary">View Versions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="glass-card">
+          <div class="badge">Founder Note</div>
+
+          <h2 class="section-title">
+            “We built BMOS for the people who want to create, not just consume.”
+          </h2>
+
+          <p class="section-subtitle">
+            — Jonathan Schoen, CEO & Founder
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="badge">Quick Start</div>
+
+        <h2 class="section-title">Start experimenting in minutes.</h2>
+
+        <p class="section-subtitle">
+          BMOS is meant to be simple to get started with. Download it, install or flash it,
+          boot into the system, and start exploring the shell.
+        </p>
+
+        <div class="cards">
+          <div class="feature-card">
+            <h3>1. Download</h3>
+            <p>Get the latest BMOS Core release from the download page.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>2. Install</h3>
+            <p>Flash or install BMOS into your supported environment.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>3. Build</h3>
+            <p>Explore commands, install packages, change settings, and create.</p>
+          </div>
+        </div>
+
+        <div class="buttons" style="margin-top: 32px;">
+          <a href="download.html" class="btn primary">Download BMOS</a>
+          <a href="sd.html" class="btn secondary">View Setup Guide</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="glass-card split-card">
+          <div>
+            <div class="badge">Roadmap</div>
+
+            <h2 class="section-title">What comes next.</h2>
+
+            <p class="section-subtitle">
+              BMOS is still growing. Future updates may add better package tools,
+              cleaner documentation, more built-in utilities, and expanded edition support.
+            </p>
+          </div>
+
+          <div class="terminal">
+            <div class="terminal-top">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+
+            <div class="terminal-body">
+<pre>BMOS Roadmap
+
+[✓] Core shell
+[✓] Website
+[✓] Package groundwork
+[ ] Public downloads
+[ ] Full docs
+[ ] BMOS Education
+[ ] BMOS Raw previews</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-inner">
+        <div class="glass-card">
+          <h2 class="section-title">Ready to try BMOS?</h2>
+
+          <p class="section-subtitle">
+            Download BMOS Core, read the setup guide, and start building your own
+            command-line workflow.
+          </p>
+
+          <div class="buttons">
+            <a href="download.html" class="btn primary">Get BMOS</a>
+            <a href="about.html" class="btn secondary">About the Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>BMOS Project · Built for experimentation and learning.</footer>

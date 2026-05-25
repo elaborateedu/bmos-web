@@ -1022,3 +1022,127 @@ footer {
     width: 100%;
   }
 }
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.donate-tier {
+  padding: 34px;
+  border-radius: 36px;
+
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.donate-tier:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(159,183,255,0.35);
+
+  background: rgba(255,255,255,0.1);
+}
+
+.featured-tier {
+  border-color: rgba(159,183,255,0.35);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(159,183,255,0.14),
+      rgba(255,255,255,0.08)
+    );
+}
+
+.tier-label {
+  display: inline-flex;
+  width: fit-content;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 0.8rem;
+  font-weight: 850;
+}
+
+.featured-label {
+  background: rgba(159,183,255,0.18);
+  border-color: rgba(159,183,255,0.35);
+  color: #dce5ff;
+}
+
+.sponsor-label {
+  background: rgba(214,168,255,0.18);
+  border-color: rgba(214,168,255,0.35);
+  color: #f0deff;
+}
+
+.donate-tier h2 {
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.tier-price {
+  font-size: 4rem;
+  font-weight: 950;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.tier-price span {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.58);
+  font-weight: 700;
+}
+
+.donate-tier p {
+  color: rgba(255,255,255,0.68);
+  line-height: 1.7;
+}
+
+.tier-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tier-features span {
+  padding: 12px 14px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.06);
+
+  color: rgba(255,255,255,0.74);
+
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 950px) {
+  .donate-grid {
+    grid-template-columns: 1fr;
+  }
+}
